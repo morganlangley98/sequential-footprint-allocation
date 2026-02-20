@@ -33,7 +33,7 @@ def _ensure_projected_equal_area(gdf: gpd.GeoDataFrame) -> gpd.GeoDataFrame:
         raise ValueError("Input layer has no CRS defined. Please define CRS before running.")
 
     if gdf.crs.is_geographic:
-        return gdf.to_crs("EPSG:5551")  # equal-area global projection
+        return gdf.to_crs("EPSG:6933")  # equal-area global projection
     return gdf
 
 
